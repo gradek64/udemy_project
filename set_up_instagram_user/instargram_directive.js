@@ -41,7 +41,7 @@ angular.module('routerApp')
 				      			        //get image url;       
 				      			        instagramFeed.content[key].imageUrl = object.images.standard_resolution.url;
 
-				      			        //get image instgram <a> link;       
+				      			        //get image instgram <a> link to exteral link;       
 				      			        instagramFeed.content[key].instagramLink = object.link;
 
 
