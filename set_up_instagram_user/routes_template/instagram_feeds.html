@@ -1,0 +1,77 @@
+					     <style type="text/css">
+
+									.instagramFeed, .instagram_container,  {
+										width:100%;
+									}
+
+									.slot {
+										width:30%;
+										margin:1%;
+										display:inline-block;
+									}
+									.slot img {
+										width:100%;
+										height: auto;
+									}
+
+									/* user Info */
+
+										.userInfo {
+											width:100%;
+										}
+										.userInfo img {
+											width:30%;
+											height: auto;
+											border-radius:50%;
+											max-width: 150px;
+											display: inline-block;
+										}
+										.info {
+											display: inline-block;
+											width:50%;
+										}
+
+									/* user Info */
+
+
+
+		
+
+						</style>
+						<!-- directive template to be tracluded into ng-trasclude attibute -->
+						
+					    <instagram-feed controller-scope-user='ctrl.user'>
+					     	<a ng-repeat="feed in directive_ctrl.content track by $index" href="{{ feed.instagramLink }}"><!--instagramFeed.content-->
+									<div class="slot">
+				                        <img class="_icyx7" id="pImage_{{$index}}" src="{{ feed.imageUrl }}">
+				                    </div>
+					     	</a>
+					    </instagram-feed>
+					    
+
+					    <!--second template on the page layout -->
+					    <script type="text/ng-template" id="myCardNestedTemplate">
+					   
+					      <article class="instagramFeed">
+		       				<div class="instagram_container">
+									 <h2>{{ctrl.title}}</h2>
+					        <p>user : {{ctrl.user.username}} </p>
+
+					        <!-- user Info -->
+					        <div class="userInfo">
+					       			 <img class="userProfile" src="{{ directive_ctrl.profile_pic_url }}"/>
+					       			 <div class="info">
+											<p>{{ directive_ctrl.username }} </p>
+											<p>{{ directive_ctrl.full_name }}</p>
+					       			 </div>
+					        	
+					        </div>
+
+							<!-- template content -->
+					        <div ng-transclude></div>
+
+
+
+							</div>
+					      </article>
+					    </script>

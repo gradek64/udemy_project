@@ -1,0 +1,36 @@
+
+  
+    <youtube current-user-data='"{{ctrl.currentuserdata}}"' >
+    <p>fwfw {{ctrl.currentuserdata}} </p>
+          <div id="container" style='border: 3px double green' >
+            
+            <div id="youtubePlayer" style="width: 100%;"></div>
+            <div class="listContainer" style='height: 400px;overflow-x:hidden;overflow-y:scroll;'>
+                      
+                    <article ng-click="youtubeskeleton.selectVideo(youtubeskeleton.content[$index].videoId)" ng-repeat="content in youtubeskeleton.content track by $index" class="row" style="margin:5px;cursor: pointer;border-bottom: 1px dotted brown;">
+                          
+                          <figure  class="col-sm-4">
+                            <img class="pic" ng-src="{{content.pic}}" style="width: 100%;height: auto;">
+                          </figure>
+                          <div class="col-sm-8">
+                                  <h4>
+                                      {{$index+1}}:{{content.title}}
+                                  </h4>
+                                  <p>
+                                    by {{content.channelTitle}}
+                                  </p>
+                          </div>
+                   </article>
+
+            </div>
+          </div>
+
+
+
+    </youtube>  
+
+
+<!-- <iframe id="player" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+  frameborder="0">
+</iframe> -->

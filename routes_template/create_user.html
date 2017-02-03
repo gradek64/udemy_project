@@ -1,0 +1,46 @@
+<div style="width:40%;margin: 0 auto;">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Create new User</legend>
+    <div class="row">
+         <div class="col-xs-9 col-md-9">
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                      <input type="email" class="form-control" id="inputv" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Favorite food</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputFood" placeholder="yummy food">
+                    </div>
+                  </div>
+          </div>
+          <div class="col-xs-3 col-md-3">
+
+          <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">place photo</label>
+          </div>
+          <div class="col-lg-10 col-lg-offset-2">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        <p>already have an account ? <a ng-click='ctrl.stateChange("login")' >login >></a></p>
+
+  </div><!--row-->
+  </fieldset>
+</form>
+</div>

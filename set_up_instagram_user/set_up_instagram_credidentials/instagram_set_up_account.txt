@@ -1,0 +1,22 @@
+How to use Instagram API 
+
+1) register your project on https://www.instagram.com/developer/review/
+2) U need to be sign in then fill up the form for new project as screen1 
+3) Important in the security tab you need to specify Valid Redirect uris in order to access your secret TOKKEn back that domain Screen2
+4) Also you need to have policy field link which is alos required Screen3 
+5) then you need to get your Tokken by going to that link 
+
+			https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+			
+ As instagram says : " 
+ 
+ 	If you are building an app that does not have a server component (a purely javascript app, for instance), you will notice that it is impossible to complete step 
+ 	three above to receive your access_token without also having to store the secret on the client.
+ 
+  "
+  so you need to use option as Client-Side (Implicit) Authentication to access correct token for pulling data Screen Screen4
+  6) you should be able to access your TOKKEN key as screen5 
+  7) Instagram only allows you to pull your own data , to get your followers data or public data you need to apply for permission as screen6 and Screen7
+  8) to get your own data use that link: 
+  
+  			https://api.instagram.com/v1/users/self/media/recent/?access_token=4465557703.179326a.5b1428876fe6409598c5101475840731

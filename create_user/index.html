@@ -1,0 +1,57 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <base href="/">
+    
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp" ng-controller='tCtrl as ctrl' > 
+
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="home">My wall</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="myvideos">My videos</a></li>
+        <li><a ui-sref="login">log In</a></li>
+        <li><a ng-if='ctrl.logged' ng-click='ctrl.logOut()'>log Out</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right col-md-offset-5">
+        <li><a href="#">{{ ctrl.logged }}</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view id='view' ng-class="ctrl.transition" ></div>
+
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+    <script type="text/javascript"> angular.module('routerApp', ['ngAnimate','ui.router']);</script>
+    <script src="routes.js"></script>
+    <script src="userService.js"></script>
+    <script src="controller.js"></script>
+    
+</body>
+</html> 
